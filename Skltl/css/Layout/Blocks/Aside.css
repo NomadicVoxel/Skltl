@@ -1,0 +1,8 @@
+aside {
+	min-width: 10em;
+	padding: var(--pad);
+	background-color: hsl(var(--fg),3%);
+}
+aside nav a {
+	display: block;
+}
