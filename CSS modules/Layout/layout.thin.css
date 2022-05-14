@@ -19,7 +19,7 @@
 	nav a {
 		display: block;
 		width: 100%;
-		padding: 0.5em;
+		padding: 0.5em 0;
 	}
 	nav a:not(:last-of-type) {
 		border-bottom: 1px solid hsla(var(--pri-h), var(--pri-s), var(--pri-l), 25%);

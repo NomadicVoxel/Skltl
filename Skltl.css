@@ -1,5 +1,5 @@
-@import url(css/theme/theme.css);
-@import url(css/layout/layout.css);
-@import url(css/Functionality/Functionality.css);
-@import url(css/BugStomp.css);
-@import url(css/Elements/Elements.css);
+@import url("CSS Modules/theme/theme.css");
+@import url("CSS Modules/layout/layout.css");
+@import url("CSS Modules/Functionality/Functionality.css");
+@import url("CSS Modules/BugStomp.css");
+@import url("CSS Modules/Elements/Elements.css");

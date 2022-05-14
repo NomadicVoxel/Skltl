@@ -8,7 +8,7 @@ html, body{
 	box-sizing: border-box;
 }
 
-i svg{
+i svg, span svg, p svg{
 	fill:currentColor;
 	width: 1em;
 	height: 1em;

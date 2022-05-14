@@ -1,8 +1,5 @@
-/* Skltl is a modular CSS framework, with an objective of using as few classes and wrappers.
- In other words, to use semantic HTML instead, and to make nearly any HTML that *wasn't* designed for it half decent. 
-The original makes extensive use of imports to make it modular. 
-Source code = https://github.com/NomadicVoxel/Skltl*//* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/theme/theme.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/theme\default_config.css*/
+/* This CSS was originally composed of several files broken into imports. Here it is compiled into one file instead. *//* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\theme/theme.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\theme\default_config.css*/
 /* Just copy/paste this file and edit the variables. */
 /* Fonts */
 :root {
@@ -44,7 +41,7 @@ Source code = https://github.com/NomadicVoxel/Skltl*//* Importing c:\Users\Nomad
 }
 
 
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/theme\default_config.css*/
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\theme\default_config.css*/
 /* General */
 :root {
 	background-color: var(--back);
@@ -108,16 +105,16 @@ footer {
 	background-color: hsla(var(--p), 10%);
 }
 
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/theme/theme.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/layout/layout.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/layout\Blocks/Blocks.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/layout\Blocks\Header.css*/
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\theme/theme.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\layout/layout.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\layout\Blocks/Blocks.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\layout\Blocks\Header.css*/
 header {
 	font-size: 2rem;
 	padding: var(--pad);
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/layout\Blocks\Header.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/layout\Blocks\Aside.css*/
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\layout\Blocks\Header.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\layout\Blocks\Aside.css*/
 aside {
 	min-width: 10em;
 	padding: var(--pad);
@@ -126,8 +123,8 @@ aside {
 aside nav a {
 	display: block;
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/layout\Blocks\Aside.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/layout\Blocks\Main.css*/
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\layout\Blocks\Aside.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\layout\Blocks\Main.css*/
 main,
 article {
 	max-width: 40em;
@@ -135,18 +132,18 @@ article {
 	margin-right: auto;
 	padding: var(--pad);
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/layout\Blocks\Main.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/layout\Blocks\Footer.css*/
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\layout\Blocks\Main.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\layout\Blocks\Footer.css*/
 footer {
 	min-height: 3em;
 	padding: var(--pad);
 	text-align: center;
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/layout\Blocks\Footer.css*/
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\layout\Blocks\Footer.css*/
 
 
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/layout\Blocks/Blocks.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/layout\layout.thin.css*/
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\layout\Blocks/Blocks.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\layout\layout.thin.css*/
 @media screen and (max-width:40em) {
 	body {
 		display: flex;
@@ -168,7 +165,7 @@ footer {
 	nav a {
 		display: block;
 		width: 100%;
-		padding: 0.5em;
+		padding: 0.5em 0;
 	}
 	nav a:not(:last-of-type) {
 		border-bottom: 1px solid hsla(var(--pri-h), var(--pri-s), var(--pri-l), 25%);
@@ -183,7 +180,7 @@ footer {
 	}
 }
 
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/layout\layout.thin.css*/
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\layout\layout.thin.css*/
 
 
 /* Grid definition */
@@ -226,9 +223,9 @@ footer {
 		grid-row: 4;
 	}
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/layout/layout.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/Functionality/Functionality.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/Functionality\Tab2Skip.css*/
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\layout/layout.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\Functionality/Functionality.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\Functionality\Tab2Skip.css*/
 /* 
 Tab2Skip. Paste this to the beginning of the document if you want to use this.
 <a href="#" id="Tab2Skip">Skip to content</a> 
@@ -243,8 +240,8 @@ Tab2Skip. Paste this to the beginning of the document if you want to use this.
 #Tab2Skip:focus {
 	top: 0;
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/Functionality\Tab2Skip.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/Functionality\DrawerHideToggle.css*/
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\Functionality\Tab2Skip.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\Functionality\DrawerHideToggle.css*/
 /* Toggle-hide button, now off by default on small screens. */
 @media screen and (max-width:40em) {
 	.HideButton:checked ~ .Hide,
@@ -258,10 +255,10 @@ Tab2Skip. Paste this to the beginning of the document if you want to use this.
 		display: none;
 	}
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/Functionality\DrawerHideToggle.css*/
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\Functionality\DrawerHideToggle.css*/
 
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/Functionality/Functionality.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/BugStomp.css*/
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\Functionality/Functionality.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\BugStomp.css*/
 html, body{
 	margin:0;
 	min-width: 100%;
@@ -279,18 +276,18 @@ i svg{
 	position:relative;
 	top:.2em;
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/BugStomp.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/Elements/Elements.css*/
-/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/Elements\CustomElements.css*/
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\BugStomp.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\Elements/Elements.css*/
+/* Importing c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\Elements\CustomElements.css*/
 code.tag:before{
 	content:"<";
 }
 code.tag:after{
 	content:">";
 }
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/Elements\CustomElements.css*/
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\Elements\CustomElements.css*/
 blockquote, figure, details {
-	padding: 20px;
+	padding-top: 20px 0;
 	width: 95%;
 	margin: 1em auto;
 	box-shadow: 
@@ -303,6 +300,6 @@ details summary, label{
 	cursor:pointer;
 }
 
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\css/Elements/Elements.css*/
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules\Elements/Elements.css*/
 
-/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl\Skltl.css*/
+/* End of file c:\Users\Nomad\Documents\Projects\Web dev\Skltl.old\CSS Modules/Skltl.css*/

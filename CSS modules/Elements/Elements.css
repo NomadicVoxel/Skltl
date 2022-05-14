@@ -1,6 +1,6 @@
 @import url(CustomElements.css);
 blockquote, figure, details {
-	padding: 20px;
+	padding-top: 20px 0;
 	width: 95%;
 	margin: 1em auto;
 	box-shadow: 
