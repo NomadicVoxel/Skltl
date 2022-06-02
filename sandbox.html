@@ -4,22 +4,38 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="/favicon.png" type="image/png">
+	<link rel="icon" href="./favicon.png" type="image/png">
 	<meta name="robots" content="noindex">
 	<title>Skltl framework Sandbox</title>
 	<style>
 		@import url(Skltl.OneFile.css);
 		@import url(config.css);
+		a[href="#PlaceThatDoesNotExist"] {color: var(--link) !important;}
+		a[href="#RightHere"] {color: var(--visited) !important;}
 
-
-		a[href="#PlaceThatDoesNotExist"] {
-			color: var(--link) !important;
+		
+		button,
+		input,
+		select,
+		textarea {
+			font-family: inherit;
+			font-size: 100%;
+			accent-color: var(--pri);
+			background: var(--bg);
+			border: 1px solid hsl(var(--fg), 50%);
+			color: var(--fg);
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
 		}
 
-		a[href="#RightHere"] {
-			color: var(--visited) !important;
+		input:not(
+			[type="checkbox"], 
+			[type="radio"], 
+			[type="file"])
+		{
+			width: 150px;
 		}
-
 	</style>
 </head>
 
@@ -51,8 +67,86 @@
 	</aside>
 	<main>
 		<h1>Skltl Test Sandbox</h1>
-		<h2>Specialty items</h2>
 		<section>
+			<h2 id="4">Forms and inputs</h2>
+			<fieldset>
+				<legend id="4b">Text</legend>
+				<p><input type="text" id="text" placeholder="text"><label for="text">text</label></p>
+				<p><input type="email" id="email"><label for="email">email</label></p>
+				<p><input type="url" id="url"><label for="url">url</label></p>
+				<p><input type="search" id="search"><label for="search">search</label></p>
+				<p><input type="password" id="password"><label for="password">password</label></p>
+				<textarea id="textarea">textarea</textarea> <label for="textarea">textarea</label>
+			</fieldset>
+			<fieldset>
+				<legend id="4a">Numbers</legend>
+				<p><input type="number" id="number"><label for="number">number</label></p>
+				<!-- <p><input type="time" id="time"><label for="time">time</label></p> -->
+				<!-- <p><input type="date" id="date"><label for="date">date</label></p> -->
+				<p><input type="tel" id="tel"><label for="tel">tel</label></p>
+				<p><input type="month" id="month"><label for="month">month</label></p>
+				<p><input type="week" id="week"><label for="week">week</label></p>
+				<p><input type="datetime" id="datetime">
+					<label for="datetime">datetime (Don't use this one! Obsoleted, use datetime-local)</label>
+				</p>
+				<!-- <p><input type="datetime-local" id="datetime-local">
+					<label for="datetime-local">datetime-local</label>
+				</p> -->
+			</fieldset>
+			<fieldset>
+				<legend id="4c">Buttons</legend>
+				<p>
+					<select id="select">
+						<option>select</option>
+						<optgroup label="XYZ">
+							<option>x</option>
+							<option>y</option>
+							<option>z</option>
+						</optgroup>
+						<optgroup label="ABC" disabled>
+							<option>a</option>
+							<option>b</option>
+							<option>c</option>
+						</optgroup>
+					</select> <label for="select">select</label>
+				</p>
+				<p> <button>actual button</button> </p>
+				<p> <input type="button" value="input button"> </p>
+				<p> <input type="file" id="file"><label for="file">file</label> </p>
+				<p> <input type="submit" id="submit"><label for="submit">submit</label> </p>
+				<p> <input type="reset" id="reset"><label for="reset">reset</label> </p>
+				<p> <input type="radio" name="rdo" id="radio" checked><label for="radio">radio</label> </p>
+				<p> <input type="radio" name="rdo" id="radios"><label for="radios">radio</label> </p>
+				<p> <input type="checkbox" id="check"><label for="check">checkbox</label> </p>
+				<p> <input type="checkbox" id="box" checked><label for="box">checkbox</label> </p>
+			</fieldset>
+			<fieldset>
+				<legend id="4d">Weird</legend>
+				<p><input type="color" id="color"><label for="color">Color</label></p>
+				<p><input type="range" id="range"><label for="range">range</label></p>
+				<p> <meter min=0 max=100 low="33" high="67" optimum="80" value="50" id="meter"> 50/100 </meter> <label
+						for="meter">meter</label> </p>
+				<p> <progress id="progress" max="100" value="70"> 70% </progress> <label for="progress">progress</label>
+				</p>
+			</fieldset>
+			<p>
+			<h3>Notes:</h3> You can put many auto-validation checks on individual form elements with attributes, no scripting
+			required. <ul>
+				<li>Accept specifies accepted file upload types</li>
+				<li>List sets inputs to only accept &lt;options&gt; from a &lt;datalist&gt;</li>
+				<li>Min/Max for numbers</li>
+				<li>MinLength/MaxLength for any text</li>
+				<li>Multiple checks whether multiple emails or files are allowed.</li>
+				<li>Pattern. Yeah we got regex.</li>
+				<li>Required.</li>
+				<li>Step determines incremental values that are valid for numbers.</li>
+			</ul>
+			<!-- ALSO. Don't forget the Output tag. <output>This thing.</output> It has no default styling, its job is for
+			holding JS output. -->
+			</p>
+		</section>
+		<section>
+			<h2>Specialty items</h2>
 			<h3>Toggle button</h3>
 			<p> Some items are just too hard to replicate in vanilla semantic HTML. Such as the collapsible menu up top. The
 				toggle button is a <code class="tag">label</code> for a checkbox of ID DrawerToggle. Place the checkbox before
@@ -69,8 +163,8 @@
 			<code class="tag">code class=Hide</code> ERR: Recursion refused. <code class="tag">/code</code>
 			</code>
 		</section>
-		<h2 id="1">Text blocks</h2>
 		<section>
+			<h2 id="1">Text blocks</h2>
 			<h3 id="1a">We needed an h3.</h3>
 			<h4>And an h4.</h4>
 			<h5>And an h5.</h5>
@@ -115,8 +209,8 @@ Preformatted text retains whitespace. F a  a   a    r      o      u        t.
 				source can be given using the cite element. <cite>MDN</cite>
 			</blockquote>
 		</section>
-		<h2 id="2">Inline text</h2>
 		<section>
+			<h2 id="2">Inline text</h2>
 			<p> Does anyone else find it odd that the default h6 is <em>smaller</em> than <strong>normal text?</strong> No?
 				Okay. <br> Anyway, inline tags here. <br>
 			</p>
@@ -162,85 +256,7 @@ Preformatted text retains whitespace. F a  a   a    r      o      u        t.
 			<p>And let's do an <i><img src="../favicon.png" alt="favicon.png"></i> image as an icon.</p> I'll work on more stuff
 			like this later.
 		</section>
-		<h2 id="4">Forms and inputs</h2>
-		<section>
-			<fieldset>
-				<legend id="4b">Text</legend>
-				<p><input type="text" id="text" placeholder="text"><label for="text">text</label></p>
-				<p><input type="email" id="email"><label for="email">email</label></p>
-				<p><input type="url" id="url"><label for="url">url</label></p>
-				<p><input type="search" id="search"><label for="search">search</label></p>
-				<p><input type="password" id="password"><label for="password">password</label></p>
-				<textarea id="textarea">textarea</textarea> <label for="textarea">textarea</label>
-			</fieldset>
-			<fieldset>
-				<legend id="4a">Numbers</legend>
-				<p><input type="number" id="number"><label for="number">number</label></p>
-				<!-- <p><input type="time" id="time"><label for="time">time</label></p> -->
-				<!-- <p><input type="date" id="date"><label for="date">date</label></p> -->
-				<p><input type="tel" id="tel"><label for="tel">tel</label></p>
-				<p><input type="month" id="month"><label for="month">month</label></p>
-				<p><input type="week" id="week"><label for="week">week</label></p>
-				<p><input type="datetime" id="datetime">
-					<label for="datetime">datetime (Don't use this one! Obsoleted, use datetime-local)</label>
-				</p>
-				<!-- <p><input type="datetime-local" id="datetime-local">
-					<label for="datetime-local">datetime-local</label>
-				</p> -->
-			</fieldset>
-			<fieldset>
-				<legend id="4c">Buttons</legend>
-				<select id="select">
-					<option>select</option>
-					<optgroup label="XYZ">
-						<option>x</option>
-						<option>y</option>
-						<option>z</option>
-					</optgroup>
-					<optgroup label="ABC" disabled>
-						<option>a</option>
-						<option>b</option>
-						<option>c</option>
-					</optgroup>
-				</select> <label for="select">select</label>
-				<button>button</button>
-				<input type="button" value="button">
-				<input type="file" id="file"><label for="file">file</label>
-				<input type="submit" id="submit"><label for="submit">submit</label>
-				<input type="reset" id="reset"><label for="reset">reset</label>
-				<input type="radio" name="rdo" id="radio" checked><label for="radio">radio</label>
-				<input type="radio" name="rdo" id="radios"><label for="radios">radio</label>
-				<input type="checkbox" id="check"><label for="check">checkbox</label>
-				<input type="checkbox" id="box" checked><label for="box">checkbox</label>
-			</fieldset>
-			<fieldset>
-				<legend id="4d">Nonstandard</legend>
-				<!-- <p><input type="color" id="color"><label for="color">Color</label></p> -->
-				<p><input type="range" id="range"><label for="range">range</label></p>
-			</fieldset>
-			<fieldset>
-				<legend id="4e">Non-input...type... stuff...</legend>
-				<!-- <p> <meter min=0 max=100 low="33" high="67" optimum="80" value="50" id="meter"> 50/100 </meter> <label
-						for="meter">meter</label> </p> -->
-				<p> <progress id="progress" max="100" value="70"> 70% </progress> <label for="progress">progress</label>
-				</p>
-			</fieldset>
-			<p>
-			<h3>Notes:</h3> You can put many auto-validation checks on individual form elements with attributes, no scripting
-			required. <ul>
-				<li>Accept specifies accepted file upload types</li>
-				<li>List sets inputs to only accept &lt;options&gt; from a &lt;datalist&gt;</li>
-				<li>Min/Max for numbers</li>
-				<li>MinLength/MaxLength for any text</li>
-				<li>Multiple checks whether multiple emails or files are allowed.</li>
-				<li>Pattern. Yeah we got regex.</li>
-				<li>Required.</li>
-				<li>Step determines incremental values that are valid for numbers.</li>
-			</ul>
-			<!-- ALSO. Don't forget the Output tag. <output>This thing.</output> It has no default styling, its job is for
-			holding JS output. -->
-			</p>
-		</section>
+
 	</main>
 	<footer>
 		<hr> Made from scratch by Clancy Clawson. <a href="https://github.com/NomadicVoxel/Skltl"> Source code available here.
