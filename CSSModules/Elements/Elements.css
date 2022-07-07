@@ -1,5 +1,6 @@
 @import url(CustomElements.css);
 @import url(Inputs.css);
+@import url(Table.css);
 
 blockquote, figure, details {
 	padding-top: 20px 0;
