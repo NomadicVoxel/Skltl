@@ -3,10 +3,10 @@ About = \
 	"This script assembles CSS that has been sharded with imports. \n  " + \
 	"Note that for now it is only meant for relative paths, remote paths are a work in progress. \n"
 
+import os
+
 DefaultInput = "Skltl.css"
 DefaultOutput = "Skltl.OneFile.css"
-
-import os
 
 def TrimImportPath(x):
 	# "@import url('foo')" -> "foo"
@@ -41,4 +41,5 @@ def Main():
 	NewFile += ProcessFile(PathIn)
 	print(NewFile)
 	with open("Skltl.OneFile.css", 'w') as SaveFile: SaveFile.write(NewFile)
+
 Main()

@@ -1,7 +1,7 @@
-@import url(CustomElements.css);
-@import url(Inputs.css);
-@import url(Table.css);
-@import url(Calendar.css);
+@import url("CustomElements.css");
+@import url("Inputs.css");
+@import url("Table.css");
+@import url("Calendar.css");
 
 blockquote, figure, details {
 	padding-top: 20px 0;
