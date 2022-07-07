@@ -10,7 +10,7 @@ DefaultOutput = "Skltl.OneFile.css"
 
 def TrimImportPath(x):
 	# "@import url('foo')" -> "foo"
-	return x.removeprefix('@import').strip().removeprefix("url(").removesuffix(")").strip()[0:-2]
+	return x.removeprefix('@import').strip().removeprefix("url(").removesuffix(")").strip(' "\'')[0:-2]
 
 def JoinPath(Path, Line):
 	x = os.path.join( os.path.dirname(Path), Line)
