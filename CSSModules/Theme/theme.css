@@ -1,6 +1,6 @@
 @import url(default_config.css);
 /* General */
-:root {
+:root{
 	background-color: var(--back);
 	color: var(--fore);
 }
