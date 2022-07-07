@@ -1,0 +1,17 @@
+#calendar td {
+	cursor:pointer;
+}
+
+#calendar .LastMonth,
+#calendar .NextMonth {
+	opacity: 50%;
+}
+
+#calendar td.Today{
+	background: hsl(var(--s), 50%);
+}
+
+#calendar td.Active{
+	border: thin solid white;
+	box-sizing:border-box;
+}
