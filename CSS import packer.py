@@ -3,14 +3,14 @@ About = \
 	"This script assembles CSS that has been sharded with imports. \n  " + \
 	"Note that for now it is only meant for relative paths, remote paths are a work in progress. \n"
 
-import os
-
 DefaultInput = "Skltl.css"
 DefaultOutput = "Skltl.OneFile.css"
 
+import os
+
 def TrimImportPath(x):
 	# "@import url('foo')" -> "foo"
-	return x.removeprefix('@import').strip().removeprefix("url(").removesuffix(")").strip(' "\'')[0:-2]
+	return x.strip().removeprefix("@import").strip().removeprefix("url(").removesuffix(");").strip(' "\'')
 
 def JoinPath(Path, Line):
 	x = os.path.join( os.path.dirname(Path), Line)
@@ -22,11 +22,11 @@ def ProcessFile(Path):
 		for Line in File:
 			if(Line.startswith("@import")):
 				imported = JoinPath(Path,TrimImportPath(Line))
-				NewFile += ("/* Importing " + imported + "*/\n")
+				NewFile += ("/* Importing " + TrimImportPath(Line) + "*/\n")
 				NewFile += ProcessFile(imported)
 			else:
 				NewFile += Line
-		NewFile += ("\n/* End of file " + Path + "*/\n") 
+		NewFile += ("\n/* End of file " + os.path.basename(Path) + "*/\n") 
 	return NewFile
 
 def Main():
@@ -40,6 +40,6 @@ def Main():
 	NewFile = "/* This CSS was originally composed of several files broken into imports. Here it is compiled into one file instead. */"
 	NewFile += ProcessFile(PathIn)
 	print(NewFile)
-	with open("Skltl.OneFile.css", 'w') as SaveFile: SaveFile.write(NewFile)
+	with open(PathOut, 'w') as SaveFile: SaveFile.write(NewFile)
 
 Main()
